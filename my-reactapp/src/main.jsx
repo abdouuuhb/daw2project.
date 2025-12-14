@@ -1,21 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <>
+    <BrowserRouter>
       <App />
-      <h1 style={{ 
-        textAlign: 'center', 
-        fontSize: '3rem', 
-        color: '#ff1493',
-        margin: '50px',
-        fontWeight: 'bold'
-      }}>
-        
-      </h1>
-    </>
+    </BrowserRouter>
   </StrictMode>
 )

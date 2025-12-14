@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const WorkshopCard = ({ workshop }) => {
   const seatsLeft = workshop.totalSeats - workshop.registered;
@@ -50,17 +51,21 @@ const WorkshopCard = ({ workshop }) => {
           </p>
         </div>
 
-        {/* زر التسجيل */}
-        <button
-          disabled={seatsLeft === 0}
-          className={`w-full mt-8 py-4 rounded-xl font-bold text-white transition-all duration-300 shadow-lg transform hover:scale-105 ${
-            seatsLeft > 0
-              ? 'bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-indigo-800 cursor-pointer'
-              : 'bg-gray-500 cursor-not-allowed opacity-70'
-          }`}
-        >
-          {seatsLeft > 0 ? "Register for the workshop" : "Complete"}
-        </button>
+        {/* زر التسجيل - الآن داخل الـ component */}
+        {seatsLeft > 0 ? (
+          <Link to="/registration" className="block mt-8">
+            <button className="w-full py-4 rounded-xl font-bold text-white transition-all duration-300 shadow-lg transform hover:scale-105 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-indigo-800">
+              Register for the workshop
+            </button>
+          </Link>
+        ) : (
+          <button
+            disabled
+            className="w-full mt-8 py-4 rounded-xl font-bold text-white bg-gray-500 cursor-not-allowed opacity-70"
+          >
+            Complete
+          </button>
+        )}
       </div>
     </div>
   );
