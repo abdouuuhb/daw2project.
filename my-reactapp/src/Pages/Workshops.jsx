@@ -191,7 +191,7 @@ function Workshops() {
         <h2 className="text-5xl font-black text-center text-indigo-900 mb-16">
          Choose Your Workshop
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-3 gap-10">
           {workshops.map((w) => (
             <WorkshopCard key={w.id} workshop={w} />
           ))}

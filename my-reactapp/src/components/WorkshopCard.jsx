@@ -55,7 +55,7 @@ const WorkshopCard = ({ workshop }) => {
         {seatsLeft > 0 ? (
           <Link to="/registration" className="block mt-8">
             <button className="w-full py-4 rounded-xl font-bold text-white transition-all duration-300 shadow-lg transform hover:scale-105 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-indigo-800">
-              Register for the workshop
+              Register
             </button>
           </Link>
         ) : (
