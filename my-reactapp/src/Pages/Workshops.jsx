@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import WorkshopCard from '../components/WorkshopCard';
 
 
@@ -119,27 +120,36 @@ function Workshops() {
           <path fill="#1e40af" fillOpacity="0.3" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,0L0,0Z"></path>
         </svg>
 
-        <div className="relative max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="text-center md:text-left z-10">
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
-              University of Constantine 2<br />
-              <span className="text-blue-300">Abdelhamid Mehri</span>
-            </h1>
-            <p className="text-xl md:text-2xl mt-3 font-semibold text-blue-200">
-              Faculty of New Information and Communication Technologies
-            </p>
-            <p className="text-lg mt-4 opacity-90">
-              Department of Fundamental Computer Science and its Applications
-            </p>
+        <div className="relative max-w-7xl mx-auto px-6 py-12">
+          <div className="flex justify-between items-center mb-8">
+            <Link to="/registration">
+              <button className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg">
+                Registration
+              </button>
+            </Link>
           </div>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="text-center md:text-left z-10">
+              <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
+                University of Constantine 2<br />
+                <span className="text-blue-300">Abdelhamid Mehri</span>
+              </h1>
+              <p className="text-xl md:text-2xl mt-3 font-semibold text-blue-200">
+                Faculty of New Information and Communication Technologies
+              </p>
+              <p className="text-lg mt-4 opacity-90">
+                Department of Fundamental Computer Science and its Applications
+              </p>
+            </div>
 
-          <div className="relative">
-            <div className="absolute inset-0 bg-blue-400 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-            <img 
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQU9d44bQkg7Ux6CnPpC2dBqZtZT1euKLYaw&s" 
-              alt="Université Constantine 2"
-              className="relative h-32 md:h-40 rounded-full border-8 border-white/30 shadow-2xl"
-            />
+            <div className="relative">
+              <div className="absolute inset-0 bg-blue-400 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+              <img 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQU9d44bQkg7Ux6CnPpC2dBqZtZT1euKLYaw&s" 
+                alt="Université Constantine 2"
+                className="relative h-32 md:h-40 rounded-full border-8 border-white/30 shadow-2xl"
+              />
+            </div>
           </div>
         </div>
 
